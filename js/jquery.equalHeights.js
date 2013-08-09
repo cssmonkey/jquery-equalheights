@@ -9,6 +9,7 @@ Example usage:
 
 $(container).equalHeights({target: element});
 
+
  */
 
 
