@@ -32,6 +32,7 @@ $(container).equalHeights({target: element, onResize: true/false});
             var container = $(this),
                 $elem = $(settings.target, container); 
             
+            // On window resize, reset the heights
             if (settings.onResize) {
                 $elem.removeAttr('style');
             }
