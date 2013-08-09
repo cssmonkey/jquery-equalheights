@@ -1,4 +1,4 @@
-﻿/*!
+/*!
  * jquery.equalHeights.js
 
 Description: Basic equalheights plugin. Sets a min-height, or height for legacy browsers, to a collection of items.
@@ -8,7 +8,6 @@ Dependancies: jQuery
 Example usage:
 
 $(container).equalHeights({target: element});
-
 
  */
 
@@ -33,6 +32,10 @@ $(container).equalHeights({target: element});
             var container = $(this),
                 $elem = $(settings.target, container); 
             
+            if (settings.onResize) {
+                $elem.removeAttr('style');
+            }
+
             // For each item within the container
             $elem.each(function (i) {
                 var $elemHeight = $(this).height();
@@ -54,7 +57,8 @@ $(container).equalHeights({target: element});
 
     // Default options
     $.fn.equalHeights.defaultOptions = {
-        target: '.item'
+        target: '.item',
+        onResize: false
     };
 
 })(jQuery);
