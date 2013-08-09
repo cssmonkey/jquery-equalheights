@@ -7,7 +7,7 @@ Dependancies: jQuery
 
 Example usage:
 
-$(container).equalHeights({target: element});
+$(container).equalHeights({target: element, onResize: true/false});
 
  */
 
