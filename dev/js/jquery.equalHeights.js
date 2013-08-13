@@ -17,16 +17,17 @@ $(container).equalHeights({target: element, onResize: true/false});
     /*  Check browser for min-height support.
         Returns true or undefined
     */
-    var supportsMinHeight = (function () {
+	
+    var supportsMinHeight = function () {
         if (typeof document.body.style.minHeight !== "undefined")
             return true;
-    })();
+    };
 
 
     $.fn.equalHeights = function (options) {
         var settings = $.extend({}, $.fn.equalHeights.defaultOptions, options),
             greatestHeight = 0,
-            heightCSS = supportsMinHeight ? 'min-height' : 'height';
+            heightCSS = supportsMinHeight() ? 'min-height' : 'height';
 
         return this.each(function () {
             var container = $(this),
