@@ -8,3 +8,5 @@ A simple jQuery plugin which sets the height of a set of specified elements with
 <strong>Example usage:</strong>
 
 $(container).equalHeights({target: element});
+
+<p><a href="http://www.sean-jones.co.uk/projects/jquery-equal-heights/" target="_blank">View the demo</a></p>
